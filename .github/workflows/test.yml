@@ -26,3 +26,7 @@ jobs:
         env:
           CONTAINS_SKIP: ${{contains(join(github.event.commits.*.message), '#skip')}}
         run: echo "$CONTAINS_SKIP"
+      - name: tagging
+        env:
+          TAGGING: ${{github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip')}}
+        run: echo "$TAGGING"
