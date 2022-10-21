@@ -1,4 +1,4 @@
-name: Healtchchek
+name: Healthchek
 
 on:
   schedule:
