@@ -1,9 +1,9 @@
 name: Healtchchek
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: '0/5 * * * *'
+    - cron: '0 5 * * 1'
 
 jobs:
   simple_health_check:
